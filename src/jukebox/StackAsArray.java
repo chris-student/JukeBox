@@ -13,11 +13,13 @@ import java.util.EmptyStackException;
 public class StackAsArray<E> implements AbstractStack<E> {
     private ArrayList<E> data = new ArrayList<>();
 
+    // Implements push method of AbstractStack
     @Override
     public void push(E o) {
         data.add(o);
     }
 
+    // Implements pop method of AbstractStack
     @Override
     public E pop() {
         if (isEmpty()) throw new EmptyStackException();
@@ -29,6 +31,7 @@ public class StackAsArray<E> implements AbstractStack<E> {
         }
     }
 
+    // Implements peek method of AbstractStack
     @Override
     public E peek() {
         if (isEmpty()) throw new EmptyStackException();
@@ -38,12 +41,13 @@ public class StackAsArray<E> implements AbstractStack<E> {
         }
     }
 
-
+    // Implements size method of AbstractStack
     @Override
     public int size() {
         return data.size();
     }
 
+    // Implements isEmpty method of AbstractStack
     @Override
     public boolean isEmpty() {
         return data.isEmpty();
